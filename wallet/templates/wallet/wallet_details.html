@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2></h2>
+    <p><strong>Saldo em Moedas Paradise:</strong> {{ wallet.coin_balance }} Moedas</p>
+    <p><strong>Saldo em BRL:</strong> R$ {{ wallet.brl_balance }}</p>
+
+    {% if user.is_superuser %}
+        <a href="#" class="btn btn-primary">Gerar Moedas Paradise</a> <!-- Exibir apenas para administradores -->
+    {% endif %}
+    
+    <a href="{% url 'purchase_coins' %}" class="btn btn-primary">Comprar Moedas</a> <!-- Botão de compra -->
+    <a href="{% url 'add_transaction' %}" class="btn btn-success">Adicionar Transação</a>
+    <a href="{% url 'convert_to_brl' %}" class="btn btn-primary">Converter Moedas</a>
+</div>
+{% endblock %}

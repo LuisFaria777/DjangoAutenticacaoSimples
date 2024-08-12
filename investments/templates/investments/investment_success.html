@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Investimento Realizado com Sucesso!</h2>
+<p>Você investiu com sucesso no plano: {{ plan.name }}.</p>
+<p>Seu investimento estará ativo até: {{ investment.end_date }}.</p>
+<a href="{% url 'view_investments' %}" class="btn btn-primary">Ver Meus Investimentos</a>
+{% endblock %}

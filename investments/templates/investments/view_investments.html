@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Seus Investimentos</h2>
+<ul>
+    {% for investment in investments %}
+    <li>
+        <h3>Plano: {{ investment.plan.name }}</h3>
+        <p>Quantidade Investida: {{ investment.amount }} Moedas Paradise</p>
+        <p>Data de Início: {{ investment.start_date }}</p>
+        <p>Data de Término: {{ investment.end_date }}</p>
+        <p>Juros Acumulados: {{ investment.interest_earned }} Moedas Paradise</p>
+        <a href="{% url 'redeem_investment' investment.id %}" class="btn btn-primary">Resgatar Investimento</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

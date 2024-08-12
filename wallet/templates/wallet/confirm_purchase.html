@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Confirme sua Compra</h2>
+<p>Você está comprando <strong>{{ purchase_details.amount_coins }}</strong> Moedas Paradise.</p>
+<p>Valor total: <strong>R$ {{ purchase_details.amount_brl }}</strong></p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success">Confirmar Compra</button>
+</form>
+{% endblock %}

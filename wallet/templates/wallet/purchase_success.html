@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Compra Concluída!</h2>
+<p>Sua compra de Moedas Paradise foi realizada com sucesso. Seu saldo foi atualizado.</p>
+<a href="{% url 'wallet_details' %}" class="btn btn-primary">Ver Carteira</a>
+{% endblock %}

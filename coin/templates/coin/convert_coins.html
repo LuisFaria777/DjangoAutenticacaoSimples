@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Convert Paradise Coins to BRL</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="amount">Amount to Convert:</label>
+    <input type="number" name="amount" required><br><br>
+    <button type="submit" class="btn btn-primary">Convert</button>
+</form>
+{% endblock %}

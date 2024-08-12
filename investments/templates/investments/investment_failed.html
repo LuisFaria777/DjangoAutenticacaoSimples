@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Falha no Investimento</h2>
+<p>Você não possui saldo suficiente</p>
+<a href="{% url 'view_plans' %}" class="btn btn-primary">Ver Planos de Investimento</a>
+{% endblock %}

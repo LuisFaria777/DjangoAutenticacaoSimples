@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Juntar-se ao {{ plan.name }}</h2>
+<p>Este grupo já tem {{ group.members.count }} membros e um investimento total de {{ group.total_investment }} Moedas Paradise.</p>
+<form method="post">
+    {% csrf_token %}
+    <label for="amount">Quantidade a Investir:</label>
+    <input type="number" name="amount" min="{{ plan.min_investment }}" required><br><br>
+    <button type="submit" class="btn btn-primary">Juntar-se ao Grupo</button>
+</form>
+{% endblock %}
