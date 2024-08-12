@@ -432,3 +432,5 @@ Estou em um projeto teste então eu adicionei esses botões
 </details>    
 
 **Esse é um jeito simples**. Se você precisa de algo Customizável ai pode ser utilizado o exemplo completo que tem na documentação do Django. De criar as views, forms, customizar os fields.
+#   D j a n g o A u t e n t i c a c a o S i m p l e s  
+ 
